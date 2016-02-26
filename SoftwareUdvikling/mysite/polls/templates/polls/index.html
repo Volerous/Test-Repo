@@ -1,0 +1,9 @@
+{% if latestSubjectList %}
+    <ul>
+    {% for subject in latestSubjectList %}
+        <li><a href="/polls/{{ subject.id }}/">{{ subject.subjectTitle }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No subjects are available.</p>
+{% endif %}
